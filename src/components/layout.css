@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 425px;
+  border: 10px solid white;
+  margin: 50px auto 0 auto;
+  box-shadow: inset 0 0 3px 0 rgba(255, 255, 255, 0.7);
+  background-color: whitesmoke;
+  border: 5px solid black;
+}
+
+.card .text-container {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.card .text-container #head {
+  font-family: 'Nobile', sans-serif;
+  font-size: 1.5em;
+  margin: 60px auto 60px auto;
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-family: 'Nobile';
+  color: #331717;
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto 0px auto;
+}
+
+.card .front { 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0px 0px -10px;
+  backface-visibility: hidden;
+  border: 10px solid whitesmoke;
+  /* background-image: url($cover-image); */
+  background-size: contain;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.front .border {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: inset 10px solid whitesmoke;
+  filter:blur(0.5rem);
+  border-radius: 1rem;
+  background-color: #d1dce8;
+  backface-visibility: hidden;
+  /* background-image: url($cover-image); */
+  background-size: contain;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.card:hover .front {
+  transform: perspective(800px) rotateY(-170deg);
+  background-color: whitesmoke;
+}
+
+.card:hover .back {
+  transform: perspective(800px) rotateY(-170deg);
+  box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.3), inset 2px 0px 15px 0px rgba(0,0,0,0.1);
+  background-color: whitesmoke;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid black;
+  margin: -10px 0px 0px -10px;
+  backface-visibility: visible;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+.cover-shape-large {
+  position: absolute;
+  width: 65%;
+  height: 48%;
+  top: 55%;
+  left: 18%;
+  /* transform: rotateZ(45deg); */
+}
+
+.cover-shape-large .shape-block, .cover-shape-large .shape-diamond {
+  background-color: #73bf8f;
+}
+
+.cover-shape-small {
+  position: absolute;
+  width: 50%;
+  height: 36%;
+  top: 0%;
+  left: 25%;
+  font-size: 25px;
+}
+
+.shape-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+
+#shape-image {
+  background-image: url('http://freedesignfile.com/upload/2013/02/Birthday-cake-vector-4.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shape-diamond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  transform: rotateZ(45deg);
+}
+
+.cake {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 45%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -125px;
+}
+
+.layer {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.layer-top { top: 0px; }
+.layer-middle { top: 33px; }
+.layer-bottom { top: 66px; }
+
+@keyframes flicker {
+    0% {
+        /* transform: rotateZ(5deg); */
+        box-shadow: 
+            0 0 10px rgba(orange, 0.2),
+            0 0 20px rgba(orange, 0.2),
+            0 0 60px rgba(orange, 0.2),
+            0 0 80px rgba(orange, 0.2) }
+    25% {
+        /* transform: rotateZ(-5deg); */
+        box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
+    50% {
+        /* transform: rotateZ(10deg); */
+        box-shadow:
+            0 0 10px rgba(orange, 0.3),
+            0 0 20px rgba(orange, 0.3),
+            0 0 60px rgba(orange, 0.3),
+            0 0 80px rgba(orange, 0.3) }
+    75% {
+        /* transform: rotateZ(-10deg); */
+        box-shadow:
+            0 0 10px rgba(orange, 0.4),
+            0 0 20px rgba(orange, 0.4),
+            0 0 60px rgba(orange, 0.4),
+            0 0 80px rgba(orange, 0.4) }
+    100% {
+        /* transform: rotateZ(5deg); */
+        box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
+}

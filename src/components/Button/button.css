@@ -1,0 +1,7 @@
+.rover-button {
+    border:1px black dashed;
+    box-sizing: 1px 1px;
+    box-shadow: 1px 1px black inset, -1px -1px black inset, 1px -1px black inset, -1px 1px black inset;
+    border-radius: .2rem;
+    padding: .5rem;
+}
