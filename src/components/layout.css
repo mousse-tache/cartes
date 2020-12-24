@@ -12,6 +12,9 @@ html, body {
   border: 10px solid white;
   margin: 50px auto 0 auto;
   box-shadow: inset 0 0 3px 0 rgba(255, 255, 255, 0.7);
+
+  background-image: url("../images/coopmot.jpg");
+  background-size: contain;
   background-color: whitesmoke;
   border: 5px solid black;
 }
@@ -49,7 +52,8 @@ html, body {
   margin: -10px 0px 0px -10px;
   backface-visibility: hidden;
   border: 10px solid whitesmoke;
-  /* background-image: url($cover-image); */
+
+  background-image: url("../images/coop-bg.png");
   background-size: contain;
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
@@ -66,7 +70,8 @@ html, body {
   border-radius: 1rem;
   background-color: #d1dce8;
   backface-visibility: hidden;
-  /* background-image: url($cover-image); */
+  background-image: url("../images/coop-bg.png");
+  background-size: contain;
   background-size: contain;
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
@@ -76,6 +81,8 @@ html, body {
 
 .card:hover .front {
   transform: perspective(800px) rotateY(-170deg);
+  background-size: contain;
+  background-image: url("../images/coop-bg.png");
   background-color: whitesmoke;
 }
 
@@ -95,6 +102,8 @@ html, body {
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
+
+  background-image: url("../images/coop-bg.png");
   transform: perspective(800px) rotateY(0deg);
   transition: all 0.8s ease-in-out;
   background-color: whitesmoke;
